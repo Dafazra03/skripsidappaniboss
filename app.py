@@ -1,13 +1,11 @@
 from flask import Flask, request, jsonify, render_template
 import joblib
 import pandas as pd
-import os
 
 app = Flask(__name__)
 
 # Memuat model
-model_path = os.path.join(os.path.dirname(__file__), 'models/model_random_forest.joblib')
-model = joblib.load(model_path)
+model = joblib.load('./models/model_random_forest.joblib')
 
 @app.route('/')
 def index():
