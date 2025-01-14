@@ -5,7 +5,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Memuat model
-model = pickle.load('./models/model.pkl')
+model = pickle.load(open('models/model.pkl', 'rb'))
 
 @app.route('/')
 def index():
