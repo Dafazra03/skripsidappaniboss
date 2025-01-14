@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify, render_template
-import joblib
+import pickle
 import pandas as pd
 
 app = Flask(__name__)
 
 # Memuat model
-model = joblib.load('./models/model_random_forest.joblib')
+model = pickle.load('./models/model.pkl')
 
 @app.route('/')
 def index():
