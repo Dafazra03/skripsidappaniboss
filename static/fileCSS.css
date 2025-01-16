@@ -78,3 +78,64 @@ body {
     font-weight: bold;
   }
   
+  @media (max-width: 768px) {
+    /* Make sure the container is centered */
+    .container {
+      width: 95%; /* Make the container wider to utilize more space */
+      padding: 20px; /* More padding for better spacing */
+      margin-left: auto; /* Ensure container is centered */
+      margin-right: auto; /* Ensure container is centered */
+    }
+  
+    /* Title Styling */
+    header h1 {
+      font-size: 1.6rem; /* Increase font size for the header */
+      text-align: center; /* Ensure the title is centered */
+      margin-top: 20px; /* Add space at the top */
+      margin-bottom: 15px; /* Add space below the header */
+    }
+  
+    /* Adjust form layout */
+    .form {
+      display: flex;
+      flex-direction: column; /* Stack all form elements in a single column */
+      gap: 15px; /* Add gap between form fields for better spacing */
+      width: 100%; /* Make sure the form takes full width */
+    }
+  
+    .form-group {
+      display: flex;
+      flex-direction: column; /* Align label and input in a vertical stack */
+    }
+  
+    /* Adjust input fields */
+    .form-group input {
+      width: 100%; /* Ensure input fields take full width */
+      padding: 12px; /* Increase padding for better user interaction */
+      font-size: 1rem; /* Increase font size for readability */
+      margin-top: 5px; /* Add spacing between label and input */
+    }
+  
+    /* Adjust the submit button */
+    .submit-button {
+      padding: 14px; /* Make the button bigger */
+      font-size: 1.2rem; /* Increase button text size */
+      width: 100%; /* Make the button take full width on smaller screens */
+      margin-top: 20px; /* Add space between button and other fields */
+    }
+  
+    /* Label Styling */
+    .form-group label {
+      font-size: 1rem; /* Slightly smaller labels */
+      margin-bottom: 8px; /* Ensure space between labels and inputs */
+    }
+  
+    /* Add spacing for the result message */
+    .result {
+      font-size: 1.2rem;
+      padding: 15px;
+      margin-top: 20px;
+      text-align: center; /* Center the result text */
+    }
+  }
+  
