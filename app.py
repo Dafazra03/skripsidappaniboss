@@ -1,8 +1,19 @@
 from flask import Flask, request, jsonify, render_template
 import pickle
 import pandas as pd
+from dotenv import load_dotenv
+import os
+
+# Memuat variabel lingkungan dari file .env
+load_dotenv()
 
 app = Flask(__name__)
+
+# Mengonfigurasi Flask dengan variabel dari .env (jika ada)
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SESSION_COOKIE_SECURE'] = os.getenv('SESSION_COOKIE_SECURE')
+app.config['PREFERRED_URL_SCHEME'] = os.getenv('PREFERRED_URL_SCHEME')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
 
 # Memuat model
 model = pickle.load(open('models/model.pkl', 'rb'))
